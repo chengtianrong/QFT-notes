@@ -11,7 +11,7 @@
   - [1.2 Dynamics of Classical Fields](#classical-dynamics)
     - [Noether's Theorem](#classical-noether)
   - [1.3 Dirac Constraint](#dirac-constraint)
-  - [1.4 The Dirac Field $`\psi`$](#dirac-field)
+  - [1.4 The Dirac Field $`\psi`$ ](#dirac-field)
 - [2. Operator Quantization](#qft-ch2)
   - [2.1 Canonical Quantization](#canonical-quantization)
 - [3. Path Integrals](#qft-ch3)
@@ -33,27 +33,33 @@
 We use the following convention for the four-dimensional Fourier transform, with the factor $`(2\pi)^{-4}`$ included in the inverse transform:
 
 ```math
+{
 \begin{aligned}
 \widetilde f(p)&=\int d^4x\,e^{+ip\cdot x}f(x),\\
 f(x)&=\int\frac{d^4p}{(2\pi)^4}\,e^{-ip\cdot x}\widetilde f(p).
 \end{aligned}
+}
 \tag{0.1}
 ```
 
 Here $`x^\mu=(t,\mathbf x)`$ and $`p^\mu=(p^0,\mathbf p)`$, and the phase is given by
 
 ```math
+{
 p\cdot x=p_\mu x^\mu=p^0t-\mathbf p\cdot\mathbf x.
+}
 \tag{0.2}
 ```
 
 The Fourier representations of the Dirac $`\delta`$ function are
 
 ```math
+{
 \begin{aligned}
 \int\frac{d^4p}{(2\pi)^4}\,e^{-ip\cdot(x-y)}&=\delta^{(4)}(x-y),\\[6pt]
 \int d^4x\,e^{i(p-q)\cdot x}&=(2\pi)^4\delta^{(4)}(p-q).
 \end{aligned}
+}
 \tag{0.3}
 ```
 
@@ -66,9 +72,11 @@ The Fourier representations of the Dirac $`\delta`$ function are
 The Pauli matrices are
 
 ```math
+{
 \sigma^1=\begin{pmatrix}0&1\\1&0\end{pmatrix},\qquad
 \sigma^2=\begin{pmatrix}0&-i\\i&0\end{pmatrix},\qquad
 \sigma^3=\begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+}
 \tag{0.4}
 ```
 
@@ -79,11 +87,13 @@ The Pauli matrices are
 For each $`i=1,2,3`$,
 
 ```math
+{
 (\sigma^i)^\dagger=\sigma^i,\qquad
 (\sigma^i)^2=I_2,\qquad
 (\sigma^i)^{-1}=\sigma^i,\qquad
 \operatorname{tr}\sigma^i=0,\qquad
 \det\sigma^i=-1.
+}
 \tag{0.5}
 ```
 
@@ -92,26 +102,32 @@ Thus, each Pauli matrix is both Hermitian and unitary, with eigenvalues $`+1`$ a
 The product identity is
 
 ```math
+{
 \sigma^i\sigma^j=\delta^{ij}I_2+i\epsilon^{ijk}\sigma^k.
+}
 \tag{0.6}
 ```
 
 This gives the commutation and anticommutation relations, as well as the trace orthogonality relation:
 
 ```math
+{
 [\sigma^i,\sigma^j]=2i\epsilon^{ijk}\sigma^k,\qquad
 \{\sigma^i,\sigma^j\}=2\delta^{ij}I_2,\qquad
 \operatorname{tr}(\sigma^i\sigma^j)=2\delta^{ij}.
+}
 \tag{0.7}
 ```
 
 For any $`\mathbf a,\mathbf b\in\mathbb R^3`$, the product identity can also be written as
 
 ```math
+{
 (\mathbf a\cdot\boldsymbol\sigma)(\mathbf b\cdot\boldsymbol\sigma)
 =(\mathbf a\cdot\mathbf b)I_2
 +i(\mathbf a\times\mathbf b)\cdot\boldsymbol\sigma,
 \qquad \boldsymbol\sigma=(\sigma^1,\sigma^2,\sigma^3).
+}
 \tag{0.8}
 ```
 
@@ -122,60 +138,74 @@ For any $`\mathbf a,\mathbf b\in\mathbb R^3`$, the product identity can also be 
 Pauli four-vectors
 
 ```math
+{
 \sigma^\mu:=(I_2,\boldsymbol\sigma),\qquad
 \bar\sigma^\mu:=(I_2,-\boldsymbol\sigma),\qquad \mu=0,1,2,3.
+}
 \tag{0.9}
 ```
 
 Using them, the $`\gamma`$ matrices in the Weyl representation are defined as:
 
 ```math
+{
 \gamma^\mu:=
 \begin{pmatrix}
 0&\sigma^\mu\\
 \bar\sigma^\mu&0
 \end{pmatrix}_{4\times4}.
+}
 \tag{0.10}
 ```
 
 These matrices satisfy 
 
 ```math
+{
 \{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}I_4.
+}
 \tag{0.11}
 ```
 
 ```math
+{
 (\gamma^0)^2=I_4,\qquad
 (\gamma^i)^2=-I_4,\\
 (\gamma^0)^\dagger=\gamma^0,\qquad
 (\gamma^i)^\dagger=-\gamma^i.
+}
 \tag{0.12}
 ```
 
 Hence each $`\gamma^\mu`$ is unitary:
 
 ```math
+{
 (\gamma^\mu)^\dagger\gamma^\mu=I_4.
+}
 \tag{0.13}
 ```
 
 Define
 
 ```math
+{
 \gamma^5:=i\gamma^0\gamma^1\gamma^2\gamma^3
 =\begin{pmatrix}-I_2&0\\0&I_2\end{pmatrix}
 .
+}
 \tag{0.14}
 ```
 
 It satisfies
 
 ```math
+{
 (\gamma^5)^2=I_4,\qquad
 \{\gamma^5,\gamma^\mu\}=0,\qquad
 (\gamma^5)^\dagger = (\gamma^5).
 
+}
 \tag{0.15}
 ```
 
@@ -191,7 +221,9 @@ To distinguish a matrix $`\Lambda`$ from the corresponding tensor $`\Lambda`$ of
 The matrix $`[\Lambda]`$
 
 ```math
+{
 O(1,3):=\{[\Lambda]\in GL(4,\mathbb R)\mid [\Lambda]^T[\eta][\Lambda]=[\eta]\}.
+}
 \tag{0.16}
 ```
 
@@ -202,7 +234,9 @@ The tensor $`\Lambda`$
 Given a specific diffeomorphism of Minkowskispacetime $`\phi:x\mapsto x'`$, we obtain a tensor
 
 ```math
+{
 \Lambda^\mu{}_\nu:=\frac{\partial x'^\mu}{\partial x^\nu}.
+}
 \tag{0.17}
 ```
 
@@ -211,21 +245,27 @@ By the way, we can prove that the isometries of Minkowski spacetime must be line
 The entry of $`[\Lambda]`$ in row $`\mu`$ and column $`\nu`$ is the corresponding component of the tensor $`\Lambda`$:
 
 ```math
+{
 [\Lambda]_{\mu\nu}=\Lambda^\mu{}_\nu.
+}
 \tag{0.18}
 ```
 
 Similarly,
 
 ```math
+{
 [\eta]_{\mu\nu}=\eta_{\mu\nu}.
+}
 \tag{0.19}
 ```
 
 Therefore, equivalently, we obtain the following relationship:
 
 ```math
+{
 \eta_{\mu\nu}\Lambda^\mu{}_\rho\Lambda^\nu{}_\sigma=\eta_{\rho\sigma}.
+}
 \tag{0.20}
 ```
 
@@ -235,8 +275,10 @@ where we have used the relation $`([\Lambda]^T)_{\mu\nu}=\Lambda^\nu{}_\mu`$. Th
 The inverse and transpose of $`[\Lambda]`$ satisfy
 
 ```math
+{
 [\Lambda]^{-1}=[\eta][\Lambda]^T[\eta],\qquad
 [\Lambda][\eta][\Lambda]^T=[\eta],
+}
 \tag{0.21}
 ```
 
@@ -245,7 +287,9 @@ so $`[\Lambda]^{-1}`$ and $`[\Lambda]^T`$ also belong to $`O(1,3)`$.
 In components, the first relation reads
 
 ```math
+{
 (\Lambda^{-1})^\mu{}_\nu=\Lambda_\nu{}^\mu.
+}
 \tag{0.22}
 ```
 
@@ -256,14 +300,18 @@ In components, the first relation reads
 Taking the determinant of $`[\Lambda]^T[\eta][\Lambda]=[\eta]`$ gives
 
 ```math
+{
 (\det[\Lambda])^2=1\quad\Longrightarrow\quad\det[\Lambda]=\pm1.
+}
 \tag{0.23}
 ```
 
 Setting $`\rho=\sigma=0`$ in $`\eta_{\mu\nu}\Lambda^\mu{}_\rho\Lambda^\nu{}_\sigma=\eta_{\rho\sigma}`$ gives
 
 ```math
+{
 (\Lambda^0{}_0)^2=1+\sum_i(\Lambda^i{}_0)^2\ge1\quad\Longrightarrow\quad\Lambda^0{}_0\ge1\ \text{or}\ \Lambda^0{}_0\le-1.
+}
 \tag{0.24}
 ```
 
@@ -272,16 +320,20 @@ We can prove that $`O(1,3)`$ has exactly these four connected components.
 Define the time reversal $`T`$ and the space inversion $`P`$ by
 
 ```math
+{
 T:(t,\mathbf x)\mapsto(-t,\mathbf x),\qquad
 P:(t,\mathbf x)\mapsto(t,-\mathbf x),
+}
 \tag{0.25}
 ```
 
 whose matrices are
 
 ```math
+{
 [T]=\operatorname{diag}(-1,1,1,1),\qquad
 [P]=\operatorname{diag}(1,-1,-1,-1).
+}
 \tag{0.26}
 ```
 
@@ -299,7 +351,9 @@ whose matrices are
 $`SO(1,3)`$ consists of the two classes with $`\det[\Lambda]=+1`$:
 
 ```math
+{
 SO(1,3)=\mathcal L^\uparrow_+\cup\mathcal L^\downarrow_+.
+}
 \tag{0.27}
 ```
 
@@ -312,35 +366,45 @@ Furthermore, $`SO(1,3)^+=\mathcal L^\uparrow_+`$ is a subgroup of $`O(1,3)`$.
 Consider a one-parameter subgroup $`e^{tX}`$, $`t\in\mathbb R`$, of $`O(1,3)`$. It satisfies
 
 ```math
+{
 (e^{tX})^T[\eta]\,e^{tX}=[\eta].
+}
 \tag{0.28}
 ```
 
 Expanding the left-hand side to first order in $`t`$ gives
 
 ```math
+{
 (I+tX^T)[\eta](I+tX)+O(t^2)=[\eta]+t\left(X^T[\eta]+[\eta]X\right)+O(t^2),
+}
 \tag{0.29}
 ```
 
 so the first-order term must vanish:
 
 ```math
+{
 X^T[\eta]+[\eta]X=0.
+}
 \tag{0.30}
 ```
 
 Therefore,
 
 ```math
+{
 \mathfrak o(1,3):=\{X\in M_4(\mathbb R)\mid X^T[\eta]+[\eta]X=0\}.
+}
 \tag{0.31}
 ```
 
 Furthermore, this relation can be written more explicitly as
 
 ```math
+{
 [\eta]X=-X^T[\eta]=-([\eta]X)^T,
+}
 \tag{0.32}
 ```
 
@@ -349,6 +413,7 @@ which means that the matrix $`[\eta]X`$ is antisymmetric.
 An antisymmetric $`4\times4`$ matrix has $`4\times3/2=6`$ independent real parameters. Hence the general form of $`X`$ is
 
 ```math
+{
 X=\begin{pmatrix}
 0&b^1&b^2&b^3\\
 b^1&0&-\theta^3&\theta^2\\
@@ -356,45 +421,56 @@ b^2&\theta^3&0&-\theta^1\\
 b^3&-\theta^2&\theta^1&0
 \end{pmatrix}
 =\sum_i\theta^iJ^i+\sum_ib^iK^i
+}
 \tag{0.33}
 ```
 
 In physics, the following notation is commonly used:
 
 ```math
+{
 e^{-\frac i2\omega^{\mu\nu}J^{\mu\nu}}
+}
 \tag{0.34}
 ```
 
 where $`\omega_{\mu\nu}`$ is antisymmetric in its indices, and
 
 ```math
+{
 -iJ^{ij}=\epsilon_{ijk}J^k,\qquad -iJ^{0i}=K^i.
+}
 \tag{0.35}
 ```
 
 Each $`J^{\mu\nu}`$ is simply a $`4\times4`$ matrix, with $`\alpha,\beta`$ labelling its rows and columns. Its entries are
 
 ```math
+{
 (J^{\mu\nu})_{\alpha\beta}=i\left(\eta^{\mu\alpha}\delta^{\nu\beta}-\eta^{\nu\alpha}\delta^{\mu\beta}\right).
+}
 \tag{0.36}
 ```
 
 Explicitly (row index $`\alpha`$, column index $`\beta`$; the remaining components follow from $`J^{\nu\mu}=-J^{\mu\nu}`$), the rotation generators $`J^{ij}=i\epsilon_{ijk}J^k`$ are Hermitian:
 
 ```math
+{
 J^{23}=\begin{pmatrix}0&0&0&0\\0&0&0&0\\0&0&0&-i\\0&0&i&0\end{pmatrix},\quad
 J^{31}=\begin{pmatrix}0&0&0&0\\0&0&0&i\\0&0&0&0\\0&-i&0&0\end{pmatrix},\quad
 J^{12}=\begin{pmatrix}0&0&0&0\\0&0&-i&0\\0&i&0&0\\0&0&0&0\end{pmatrix},
+}
 \tag{0.37}
 ```
 
 and the boost generators $`J^{0i}=iK^i`$ are anti-Hermitian:
 
 ```math
+{
 J^{01}=\begin{pmatrix}0&i&0&0\\i&0&0&0\\0&0&0&0\\0&0&0&0\end{pmatrix},\quad
 J^{02}=\begin{pmatrix}0&0&i&0\\0&0&0&0\\i&0&0&0\\0&0&0&0\end{pmatrix},\quad
 J^{03}=\begin{pmatrix}0&0&0&i\\0&0&0&0\\0&0&0&0\\i&0&0&0\end{pmatrix}.
+}
 \tag{0.38}
 ```
 
@@ -413,12 +489,16 @@ J^{03}=\begin{pmatrix}0&0&0&i\\0&0&0&0\\0&0&0&0\\i&0&0&0\end{pmatrix}.
 **Definition**
 
 ```math
+{
 \text{Field}:\text{Spacetime}\longrightarrow\text{Vector Space},
+}
 \tag{1.1}
 ```
 
 ```math
+{
 \boxed{\Psi:\mathbb R^4\longrightarrow\mathbb R^n\ \text{or}\ \mathbb C^n
+}
 }
 \tag{1.2}
 ```
@@ -428,13 +508,16 @@ Additional regularity conditions, such as $`C^\infty`$ smoothness, may be impose
 The space of fields $`\{\Psi\}`$ carries a representation of $`ISO(1,3)^+`$. For $`(\Lambda,a)\in ISO(1,3)^+`$,
 
 ```math
+{
 \Psi\xrightarrow{\;(\Lambda,a)\;}U(\Lambda,a)\Psi,
+}
 \tag{1.3}
 ```
 
 where $`U`$ is an infinite-dimensional representation that can be constructed from the finite-dimensional representation $`D(\Lambda)`$:
 
 ```math
+{
 \boxed{
 \begin{aligned}
 [U(\Lambda,a)\Psi]_\alpha(x)
@@ -443,6 +526,7 @@ where $`U`$ is an infinite-dimensional representation that can be constructed fr
 &=D_{\alpha\beta}(\Lambda)
 \Psi_\beta(\Lambda^{-1}x-\Lambda^{-1}a).
 \end{aligned}
+}
 }
 \tag{1.4}
 ```
@@ -485,6 +569,7 @@ The following assumptions are commonly used to construct local relativistic fiel
 Let $`\phi_\lambda`$ be a one-parameter family of transformations with $`\phi_0=\mathrm{id}`$, acting on spacetime as $`x\mapsto x'=\phi_\lambda(x)`$, with $`x'^\mu=:x^\mu+\delta x^\mu`$, and on the field as $`\Psi\mapsto\Psi'`$. If the action is invariant under $`\phi_\lambda`$ for every integration region $`\Omega`$ in (1.8), then the quantity
 
 ```math
+{
 \boxed{
 \int d^3x\left(
 \frac{\partial\mathcal L}{\partial\dot\Psi_\alpha}
@@ -494,6 +579,7 @@ Let $`\phi_\lambda`$ be a one-parameter family of transformations with $`\phi_0=
 \frac{\partial\,\delta_0\Psi_\alpha}{\partial\lambda}
 -\mathcal L\frac{\partial\,\delta x^0}{\partial\lambda}
 \right),
+}
 }
 \tag{1.5}
 ```
@@ -507,6 +593,7 @@ is conserved when the field $`\Psi_\alpha`$ satisfies the Euler–Lagrange equat
 Let $`x'=\phi_\lambda(x)`$, with $`\lambda`$ infinitesimal. Define two field variations:
 
 ```math
+{
 \begin{aligned}
 \delta_0\Psi_\alpha(x)
 &:=\Psi'_\alpha(x')-\Psi_\alpha(x)
@@ -515,6 +602,7 @@ Let $`x'=\phi_\lambda(x)`$, with $`\lambda`$ infinitesimal. Define two field var
 &:=\Psi'_\alpha(x)-\Psi_\alpha(x)
 =[U(\Lambda,a)\Psi]_\alpha(x)-\Psi_\alpha(x).
 \end{aligned}
+}
 \tag{1.6}
 ```
 
@@ -523,6 +611,7 @@ Here $`\Psi'`$ is the transformed field. Using the pushforward $`(\phi_\lambda)_
 To first order in $`\lambda`$, the two variations are related by
 
 ```math
+{
 \begin{aligned}
 \delta\Psi_\alpha(x)
 &=\bigl[\Psi'_\alpha(x')-\Psi_\alpha(x)\bigr]
@@ -530,6 +619,7 @@ To first order in $`\lambda`$, the two variations are related by
 &=\delta_0\Psi_\alpha(x)-\delta x^\mu\partial_\mu\Psi'_\alpha(x)\\
 &=\delta_0\Psi_\alpha(x)-\delta x^\mu\partial_\mu\Psi_\alpha(x),
 \end{aligned}
+}
 \tag{1.7}
 ```
 
@@ -538,12 +628,14 @@ where the last step uses $`\Psi'_\alpha=\Psi_\alpha+O(\lambda)`$.
 Over a spacetime region $`\Omega`$, the actions before and after the transformation are
 
 ```math
+{
 \begin{aligned}
 I&=\int_\Omega d^4x\,
 \mathcal L\bigl(\Psi_\alpha(x),\partial_\mu\Psi_\alpha(x)\bigr),\\
 I'&=\int_{\phi_\lambda(\Omega)}d^4x'\,
 \mathcal L\bigl(\Psi'_\alpha(x'),\partial'_\mu\Psi'_\alpha(x')\bigr),
 \end{aligned}
+}
 \tag{1.8}
 ```
 
@@ -552,6 +644,7 @@ where $`\partial'_\mu:=\partial/\partial x'^\mu`$. The same function $`\mathcal 
 Change the integration variable in $`I'`$ from $`x'`$ back to $`x`$, so that $`\phi_\lambda(\Omega)`$ becomes $`\Omega`$. To first order in $`\lambda`$,
 
 ```math
+{
 \begin{aligned}
 d^4x'
 &=\det\!\left(\frac{\partial x'^\mu}{\partial x^\nu}\right)d^4x
@@ -566,12 +659,14 @@ d^4x'
 +\partial_\mu\delta_0\Psi_\alpha(x)
 -(\partial_\mu\delta x^\nu)\partial_\nu\Psi_\alpha(x),
 \end{aligned}
+}
 \tag{1.9}
 ```
 
 where the third line is (1.6). Hence
 
 ```math
+{
 I'=\int_\Omega d^4x\,
 \bigl(1+\partial_\mu\delta x^\mu\bigr)\,
 \mathcal L\bigl(
@@ -580,12 +675,14 @@ I'=\int_\Omega d^4x\,
 +\partial_\mu\delta_0\Psi_\alpha
 -(\partial_\mu\delta x^\nu)\partial_\nu\Psi_\alpha
 \bigr).
+}
 \tag{1.10}
 ```
 
 Expanding (1.10) to first order in $`\lambda`$ gives the off-shell identity
 
 ```math
+{
 \begin{aligned}
 I'-I
 &=\int_\Omega d^4x\,\biggl[
@@ -607,6 +704,7 @@ I'-I
 \biggr]
 \biggr\}.
 \end{aligned}
+}
 \tag{1.11}
 ```
 
@@ -615,6 +713,7 @@ The second equality substitutes $`\delta_0\Psi_\alpha=\delta\Psi_\alpha+\delta x
 By hypothesis, the action is invariant: $`I'=I`$. Take $`\Omega=[t_1,t_2]\times V`$ and let $`\Psi_\alpha`$ satisfy the Euler–Lagrange equations, so that the Euler–Lagrange term in (1.11) vanishes. Gauss's theorem then gives
 
 ```math
+{
 \begin{aligned}
 0
 &=\int_\Omega d^4x\,\partial_\mu\biggl[
@@ -631,16 +730,19 @@ By hypothesis, the action is invariant: $`I'=I`$. Take $`\Omega=[t_1,t_2]\times 
 +\frac{\partial\mathcal L}{\partial(\partial_i\Psi_\alpha)}\delta\Psi_\alpha
 \biggr).
 \end{aligned}
+}
 \tag{1.12}
 ```
 
 By the fall-off condition, the surface term vanishes as $`V\to\mathbb R^3`$. Since $`t_1`$ and $`t_2`$ are arbitrary,
 
 ```math
+{
 \int d^3x\,\biggl(
 \mathcal L\,\delta x^0
 +\frac{\partial\mathcal L}{\partial\dot\Psi_\alpha}\delta\Psi_\alpha
 \biggr)=\text{const}.
+}
 \tag{1.13}
 ```
 
@@ -651,15 +753,19 @@ Substituting $`\delta\Psi_\alpha=\delta_0\Psi_\alpha-\delta x^\nu\partial_\nu\Ps
 Now $`\phi_\lambda`$ acts trivially on spacetime, and on the field by a constant matrix $`g(\lambda)`$ with $`g(0)=I_n`$:
 
 ```math
+{
 x'^\mu=x^\mu,\qquad
 \Psi'_\alpha(x)=g_{\alpha\beta}(\lambda)\,\Psi_\beta(x).
+}
 \tag{1.14}
 ```
 
 Hence $`\delta x^\mu=0`$, and the two variations in (1.6) coincide: $`\delta\Psi_\alpha(x)=\delta_0\Psi_\alpha(x)=g_{\alpha\beta}(\lambda)\Psi_\beta(x)-\Psi_\alpha(x)`$. Repeating (1.8)–(1.13) with $`\delta x^\mu=0`$: in (1.9), $`d^4x'=d^4x`$ and $`\partial'_\mu=\partial_\mu`$; the terms containing $`\delta x^\mu`$ drop out of (1.10)–(1.12); and (1.13) becomes
 
 ```math
+{
 \int d^3x\,\frac{\partial\mathcal L}{\partial\dot\Psi_\alpha}\,\delta_0\Psi_\alpha=\text{const}.
+}
 \tag{1.15}
 ```
 
@@ -699,8 +805,10 @@ Differentiating with respect to $`\lambda`$ and reversing the overall sign gives
 The Lagrangian of the Dirac Field has the following form:
 
 ```math
+{
 \boxed{
 \mathcal L=\bar\psi\bigl(i\gamma^\mu\partial_\mu-m\bigr)\psi,
+}
 }
 \tag{1.16}
 ```
@@ -710,8 +818,10 @@ where $`\psi:\mathbb R^4\to\mathbb C^4`$ is the Dirac field, $`\bar\psi:=\psi^\d
 Treating $`\psi`$ and $`\bar\psi`$ as independent, the Euler–Lagrange equation for $`\bar\psi`$ is the Dirac equation:
 
 ```math
+{
 \boxed{
 \bigl(i\gamma^\mu\partial_\mu-m\bigr)\psi=0.
+}
 }
 \tag{1.17}
 ```
@@ -723,24 +833,29 @@ Treating $`\psi`$ and $`\bar\psi`$ as independent, the Euler–Lagrange equation
 For the Dirac field, $`D(\Lambda)`$ in (1.4) is
 
 ```math
+{
 \Lambda_{\frac12}=\exp\Bigl(-\frac i2\omega_{\mu\nu}S^{\mu\nu}\Bigr),
 \qquad
 S^{\mu\nu}:=\frac i4[\gamma^\mu,\gamma^\nu],
+}
 \tag{1.18}
 ```
 
 with the same $`\omega_{\mu\nu}`$ as in (0.34). In the Weyl representation every $`S^{\mu\nu}`$ is block diagonal:
 
 ```math
+{
 S^{0i}=-\frac i2\begin{pmatrix}\sigma^i&0\\0&-\sigma^i\end{pmatrix},
 \qquad
 S^{ij}=\frac12\epsilon^{ijk}\begin{pmatrix}\sigma^k&0\\0&\sigma^k\end{pmatrix}.
+}
 \tag{1.19}
 ```
 
 Hence $`\Lambda_{\frac12}`$ is block diagonal: writing $`\psi=\begin{pmatrix}\psi_L\\\psi_R\end{pmatrix}`$, the left-handed and right-handed Weyl spinors $`\psi_L,\psi_R`$ transform independently. For an infinitesimal transformation, with $`\omega_{ij}=\epsilon_{ijk}\theta^k`$ and $`\omega_{0i}=b^i`$ as in (0.33),
 
 ```math
+{
 \begin{aligned}
 \Lambda_{\frac12}
 &\simeq I_4-\frac i2\omega_{\mu\nu}S^{\mu\nu}\\
@@ -748,22 +863,26 @@ Hence $`\Lambda_{\frac12}`$ is block diagonal: writing $`\psi=\begin{pmatrix}\ps
 -i\Bigl(-\frac i2\Bigr)\begin{pmatrix}\mathbf b\cdot\boldsymbol\sigma&0\\0&-\mathbf b\cdot\boldsymbol\sigma\end{pmatrix}\\
 &=\begin{pmatrix}I_2-i\boldsymbol\theta\cdot\frac{\boldsymbol\sigma}2-\mathbf b\cdot\frac{\boldsymbol\sigma}2&0\\0&I_2-i\boldsymbol\theta\cdot\frac{\boldsymbol\sigma}2+\mathbf b\cdot\frac{\boldsymbol\sigma}2\end{pmatrix},
 \end{aligned}
+}
 \tag{1.20}
 ```
 
 so that
 
 ```math
+{
 \begin{aligned}
 \psi_L&\xrightarrow{\ \Lambda\ }\Bigl(I_2-i\boldsymbol\theta\cdot\frac{\boldsymbol\sigma}2-\mathbf b\cdot\frac{\boldsymbol\sigma}2\Bigr)\psi_L,\\
 \psi_R&\xrightarrow{\ \Lambda\ }\Bigl(I_2-i\boldsymbol\theta\cdot\frac{\boldsymbol\sigma}2+\mathbf b\cdot\frac{\boldsymbol\sigma}2\Bigr)\psi_R.
 \end{aligned}
+}
 \tag{1.21}
 ```
 
 In terms of $`\psi_L,\psi_R`$, the Dirac equation (1.17) reads
 
 ```math
+{
 \begin{pmatrix}-m&i\sigma^\mu\partial_\mu\\i\bar\sigma^\mu\partial_\mu&-m\end{pmatrix}
 \begin{pmatrix}\psi_L\\\psi_R\end{pmatrix}=0
 \quad\Longleftrightarrow\quad
@@ -771,16 +890,19 @@ In terms of $`\psi_L,\psi_R`$, the Dirac equation (1.17) reads
 i\sigma^\mu\partial_\mu\psi_R-m\psi_L=0,\\
 i\bar\sigma^\mu\partial_\mu\psi_L-m\psi_R=0.
 \end{cases}
+}
 \tag{1.22}
 ```
 
 For $`m=0`$ it reduces to the Weyl equations
 
 ```math
+{
 \begin{cases}
 i\bigl(\partial_t-\boldsymbol\sigma\cdot\nabla\bigr)\psi_L=0,\\
 i\bigl(\partial_t+\boldsymbol\sigma\cdot\nabla\bigr)\psi_R=0.
 \end{cases}
+}
 \tag{1.23}
 ```
 
@@ -791,38 +913,46 @@ i\bigl(\partial_t+\boldsymbol\sigma\cdot\nabla\bigr)\psi_R=0.
 Apply $`-i\gamma^\mu\partial_\mu-m`$ to the left-hand side of (1.17):
 
 ```math
+{
 \begin{aligned}
 \bigl(-i\gamma^\mu\partial_\mu-m\bigr)\bigl(i\gamma^\nu\partial_\nu-m\bigr)\psi
 &=\bigl(\gamma^\mu\gamma^\nu\partial_\mu\partial_\nu+m^2\bigr)\psi\\
 &=\bigl(\eta^{\mu\nu}\partial_\mu\partial_\nu+m^2\bigr)\psi\\
 &=\bigl(\Box+m^2\bigr)\psi,
 \end{aligned}
+}
 \tag{1.24}
 ```
 
 where $`\Box:=\eta^{\mu\nu}\partial_\mu\partial_\nu=\partial_t^2-\nabla^2`$. Since the left-hand side of (1.24) vanishes by (1.17), every component of $`\psi`$ satisfies the Klein–Gordon equation
 
 ```math
+{
 \bigl(\Box+m^2\bigr)\psi=0.
+}
 \tag{1.25}
 ```
 
 A plane wave $`e^{-ip\cdot x}`$ satisfies (1.25) only if $`p^2=m^2`$. In the Weyl representation (0.10), the plane-wave solutions of (1.17) therefore take the form
 
 ```math
+{
 \psi(x)=\begin{pmatrix}u_L\\u_R\end{pmatrix}e^{-ip\cdot x},
 \qquad
 p^0=\pm E_{\mathbf p},\quad
 E_{\mathbf p}:=\sqrt{\mathbf p^2+m^2},
+}
 \tag{1.26}
 ```
 
 where $`u_L,u_R\in\mathbb C^2`$ are constant. Substituting (1.26) into (1.17) gives
 
 ```math
+{
 \bigl(\not p-m\bigr)\begin{pmatrix}u_L\\u_R\end{pmatrix}=0,
 \qquad
 \not p:=\gamma\cdot p=p^\mu\gamma_\mu.
+}
 \tag{1.27}
 ```
 
@@ -831,19 +961,23 @@ where $`u_L,u_R\in\mathbb C^2`$ are constant. Substituting (1.26) into (1.17) gi
 Take $`m>0`$ and work in the rest frame, $`\mathbf p=\mathbf 0`$; there we denote the constants in (1.26) by $`u_L(\mathbf 0)`$ and $`u_R(\mathbf 0)`$. First consider $`p^0>0`$. Then $`p^\mu=(m,\mathbf 0)`$, $`e^{-ip\cdot x}=e^{-imt}`$ and $`\not p=m\gamma^0`$, so (1.27) becomes
 
 ```math
+{
 \begin{aligned}
 \bigl(m\gamma^0-m\bigr)\begin{pmatrix}u_L(\mathbf 0)\\u_R(\mathbf 0)\end{pmatrix}
 &=\begin{pmatrix}-mI_2&mI_2\\mI_2&-mI_2\end{pmatrix}
 \begin{pmatrix}u_L(\mathbf 0)\\u_R(\mathbf 0)\end{pmatrix}=0\\[6pt]
 \Longrightarrow\quad u_L(\mathbf 0)&=u_R(\mathbf 0).
 \end{aligned}
+}
 \tag{1.28}
 ```
 
 Writing $`u:=\begin{pmatrix}u_L\\u_R\end{pmatrix}`$, there are two independent solutions
 
 ```math
+{
 u^s(\mathbf 0)=\sqrt m\begin{pmatrix}\xi^s\\\xi^s\end{pmatrix},\qquad s=1,2,
+}
 \tag{1.29}
 ```
 
@@ -854,41 +988,49 @@ where $`\{\xi^s\}`$ is a basis of $`\mathbb C^2`$ with $`\xi^{r\dagger}\xi^s=\de
 Boost along $`z`$ with rapidity $`\eta`$, i.e. $`\omega_{03}=\eta`$ in (1.18), so that $`\mathbf p=(0,0,p^3)`$ and $`\tanh\eta=v=p^3/E_{\mathbf p}`$. Then
 
 ```math
+{
 \begin{aligned}
 \Lambda_{\frac12}=e^{-i\eta S^{03}}
 &=\exp\Bigl[-i\eta\Bigl(-\frac i2\Bigr)\begin{pmatrix}\sigma^3&0\\0&-\sigma^3\end{pmatrix}\Bigr]
 =\begin{pmatrix}e^{-\frac12\eta\sigma^3}&0\\0&e^{\frac12\eta\sigma^3}\end{pmatrix}\\
 &=\operatorname{diag}\bigl(e^{-\eta/2},\,e^{\eta/2},\,e^{\eta/2},\,e^{-\eta/2}\bigr),
 \end{aligned}
+}
 \tag{1.30}
 ```
 
 ```math
+{
 \tanh\eta=v
 \ \Longrightarrow\
 e^{\pm\eta}=\sqrt{\frac{1\pm v}{1\mp v}}=\frac{E_{\mathbf p}\pm p^3}{m},
 \qquad
 e^{\pm\eta/2}=\sqrt{\frac{E_{\mathbf p}\pm p^3}{m}}.
+}
 \tag{1.31}
 ```
 
 Hence
 
 ```math
+{
 u^s(p)=\Lambda_{\frac12}u^s(\mathbf 0)
 =\operatorname{diag}\Bigl(\sqrt{E_{\mathbf p}-p^3},\,\sqrt{E_{\mathbf p}+p^3},\,\sqrt{E_{\mathbf p}+p^3},\,\sqrt{E_{\mathbf p}-p^3}\Bigr)
 \begin{pmatrix}\xi^s\\\xi^s\end{pmatrix}.
+}
 \tag{1.32}
 ```
 
 With $`\xi^1=\begin{pmatrix}1\\0\end{pmatrix}`$ and $`\xi^2=\begin{pmatrix}0\\1\end{pmatrix}`$,
 
 ```math
+{
 u^1(p)=\begin{pmatrix}\sqrt{E_{\mathbf p}-p^3}\\0\\\sqrt{E_{\mathbf p}+p^3}\\0\end{pmatrix}
 \xrightarrow{\ \eta\to\infty\ }\sqrt{2E_{\mathbf p}}\begin{pmatrix}0\\0\\1\\0\end{pmatrix},
 \qquad
 u^2(p)=\begin{pmatrix}0\\\sqrt{E_{\mathbf p}+p^3}\\0\\\sqrt{E_{\mathbf p}-p^3}\end{pmatrix}
 \xrightarrow{\ \eta\to\infty\ }\sqrt{2E_{\mathbf p}}\begin{pmatrix}0\\1\\0\\0\end{pmatrix}.
+}
 \tag{1.33}
 ```
 
@@ -897,21 +1039,25 @@ u^2(p)=\begin{pmatrix}0\\\sqrt{E_{\mathbf p}+p^3}\\0\\\sqrt{E_{\mathbf p}-p^3}\e
 Since $`\operatorname{diag}\bigl(\sqrt{E_{\mathbf p}-p^3},\sqrt{E_{\mathbf p}+p^3}\bigr)=\sqrt{E_{\mathbf p}-p^3\sigma^3}`$ and $`\operatorname{diag}\bigl(\sqrt{E_{\mathbf p}+p^3},\sqrt{E_{\mathbf p}-p^3}\bigr)=\sqrt{E_{\mathbf p}+p^3\sigma^3}`$, for arbitrary $`\mathbf p`$
 
 ```math
+{
 \sqrt m\,\Lambda_{\frac12}=\begin{pmatrix}\sqrt{p\cdot\sigma}&0\\0&\sqrt{p\cdot\bar\sigma}\end{pmatrix},
 \qquad
 p\cdot\sigma:=p_\mu\sigma^\mu=p^0I_2-\mathbf p\cdot\boldsymbol\sigma,
 \quad
 p\cdot\bar\sigma:=p_\mu\bar\sigma^\mu=p^0I_2+\mathbf p\cdot\boldsymbol\sigma,
+}
 \tag{1.34}
 ```
 
 with positive square roots. The positive-energy solutions are
 
 ```math
+{
 \boxed{
 \psi=u^s(p)\,e^{-ip\cdot x},\qquad
 u^s(p)=\begin{pmatrix}\sqrt{p\cdot\sigma}\,\xi^s\\\sqrt{p\cdot\bar\sigma}\,\xi^s\end{pmatrix},\qquad
 p^0=E_{\mathbf p}.
+}
 }
 \tag{1.35}
 ```
@@ -919,6 +1065,7 @@ p^0=E_{\mathbf p}.
 **Verification**
 
 ```math
+{
 \begin{aligned}
 (p\cdot\bar\sigma)(p\cdot\sigma)
 &=\bigl(p^0I_2+p^i\sigma^i\bigr)\bigl(p^0I_2-p^j\sigma^j\bigr)
@@ -929,6 +1076,7 @@ p^0=E_{\mathbf p}.
 \begin{pmatrix}\sqrt{p\cdot\sigma}\,\xi^s\\\sqrt{p\cdot\bar\sigma}\,\xi^s\end{pmatrix}
 =\begin{pmatrix}\sqrt{p\cdot\sigma}\,\bigl(\sqrt{(p\cdot\sigma)(p\cdot\bar\sigma)}-m\bigr)\xi^s\\\sqrt{p\cdot\bar\sigma}\,\bigl(\sqrt{(p\cdot\bar\sigma)(p\cdot\sigma)}-m\bigr)\xi^s\end{pmatrix}=0.
 \end{aligned}
+}
 \tag{1.36}
 ```
 
@@ -939,18 +1087,22 @@ p^0=E_{\mathbf p}.
 For $`p^0=-E_{\mathbf p}`$, (1.27) becomes
 
 ```math
+{
 \bigl(-\gamma^0E_{\mathbf p}-\boldsymbol\gamma\cdot\mathbf p-m\bigr)u(p)=0
 \quad\Longleftrightarrow\quad
 \bigl(\gamma^0E_{\mathbf p}-\boldsymbol\gamma\cdot(-\mathbf p)+m\bigr)u(p)=0,
+}
 \tag{1.37}
 ```
 
 which is the positive-energy equation $`\bigl(\gamma^0E_{\mathbf p}-\boldsymbol\gamma\cdot\mathbf p-m\bigr)u=0`$ with $`\mathbf p\to-\mathbf p`$ and $`m\to-m`$. Hence
 
 ```math
+{
 u^s(p)=\begin{pmatrix}\sqrt{E_{\mathbf p}I_2+\mathbf p\cdot\boldsymbol\sigma}\,\xi^s\\-\sqrt{E_{\mathbf p}I_2-\mathbf p\cdot\boldsymbol\sigma}\,\xi^s\end{pmatrix}
 =\begin{pmatrix}\sqrt{-p\cdot\sigma}\,\xi^s\\-\sqrt{-p\cdot\bar\sigma}\,\xi^s\end{pmatrix},
 \qquad p^0=-E_{\mathbf p}.
+}
 \tag{1.38}
 ```
 
@@ -959,39 +1111,47 @@ u^s(p)=\begin{pmatrix}\sqrt{E_{\mathbf p}I_2+\mathbf p\cdot\boldsymbol\sigma}\,\
 Define
 
 ```math
+{
 u^c(p):=\begin{pmatrix}i\sigma^2&0\\0&-i\sigma^2\end{pmatrix}\gamma^0\,u(p),
 \qquad
 i\sigma^2=\begin{pmatrix}0&1\\-1&0\end{pmatrix}.
+}
 \tag{1.39}
 ```
 
 For $`\mathbf p=(0,0,p^3)`$,
 
 ```math
+{
 i\sigma^2\sqrt{p\cdot\bar\sigma}
 =\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}\sqrt{E_{\mathbf p}+p^3}&0\\0&\sqrt{E_{\mathbf p}-p^3}\end{pmatrix}
 =\begin{pmatrix}0&\sqrt{E_{\mathbf p}-p^3}\\-\sqrt{E_{\mathbf p}+p^3}&0\end{pmatrix}
 =\sqrt{p\cdot\sigma}\;i\sigma^2,
+}
 \tag{1.40}
 ```
 
 and likewise $`i\sigma^2\sqrt{p\cdot\sigma}=\sqrt{p\cdot\bar\sigma}\;i\sigma^2`$. Applying (1.39) to (1.35) and writing $`\eta^s:=i\sigma^2\xi^s`$,
 
 ```math
+{
 u^c(p)=\begin{pmatrix}i\sigma^2\sqrt{p\cdot\bar\sigma}\,\xi^s\\-i\sigma^2\sqrt{p\cdot\sigma}\,\xi^s\end{pmatrix}
 =\begin{pmatrix}\sqrt{p\cdot\sigma}\,\eta^s\\-\sqrt{p\cdot\bar\sigma}\,\eta^s\end{pmatrix},
 \qquad p^0=E_{\mathbf p},
+}
 \tag{1.41}
 ```
 
 which is (1.38) at $`-p`$ with $`\xi^s\to\eta^s`$. For arbitrary $`\mathbf p`$, the antiparticle solutions are
 
 ```math
+{
 \boxed{
 \psi=v^s(p)\,e^{+ip\cdot x},\qquad
 v^s(p):=\begin{pmatrix}\sqrt{p\cdot\sigma}\,\eta^s\\-\sqrt{p\cdot\bar\sigma}\,\eta^s\end{pmatrix},\qquad
 \bigl(\not p+m\bigr)v^s(p)=0,\qquad
 p^0=E_{\mathbf p}.
+}
 }
 \tag{1.42}
 ```
@@ -1005,12 +1165,14 @@ p^0=E_{\mathbf p}.
 From (1.35), $`u^\dagger u=2E_{\mathbf p}\,\xi^\dagger\xi`$ and $`\bar uu=2m\,\xi^\dagger\xi`$. With $`\xi^{r\dagger}\xi^s=\eta^{r\dagger}\eta^s=\delta^{rs}`$,
 
 ```math
+{
 \boxed{
 \begin{aligned}
 u^{r\dagger}(p)\,u^s(p)&=2E_{\mathbf p}\,\delta^{rs}, &\qquad \bar u^r(p)\,u^s(p)&=2m\,\delta^{rs},\\
 v^{r\dagger}(p)\,v^s(p)&=2E_{\mathbf p}\,\delta^{rs}, &\qquad \bar v^r(p)\,v^s(p)&=-2m\,\delta^{rs},\\
 u^{r\dagger}(p)\,v^s(p')&=v^{r\dagger}(p')\,u^s(p)=0, &\qquad p'&:=(p^0,-\mathbf p).
 \end{aligned}
+}
 }
 \tag{1.43}
 ```
@@ -1020,9 +1182,11 @@ u^{r\dagger}(p)\,v^s(p')&=v^{r\dagger}(p')\,u^s(p)=0, &\qquad p'&:=(p^0,-\mathbf
 With $`\sum_s\xi^s\xi^{s\dagger}=I_2`$,
 
 ```math
+{
 \boxed{
 \sum_s u^s(p)\,\bar u^s(p)=\not p+m,\qquad
 \sum_s v^s(p)\,\bar v^s(p)=\not p-m.
+}
 }
 \tag{1.44}
 ```
@@ -1048,14 +1212,17 @@ Bilinears have the form $`\bar\psi\Gamma\psi`$ with $`\Gamma`$ a $`4\times4`$ ma
 where
 
 ```math
+{
 \gamma^5=\frac{i}{4!}\epsilon_{\mu\nu\rho\sigma}\gamma^\mu\gamma^\nu\gamma^\rho\gamma^\sigma,
 \qquad \epsilon_{0123}=+1,
+}
 \tag{1.45}
 ```
 
 which agrees with (0.14). Under $`\psi\to\Lambda_{\frac12}\psi`$, $`\bar\psi\to\bar\psi\Lambda_{\frac12}^{-1}`$,
 
 ```math
+{
 \begin{aligned}
 \bar\psi\psi&\xrightarrow{\ \Lambda\ }\bar\psi\psi,\\
 \bar\psi\gamma^\mu\psi&\xrightarrow{\ \Lambda\ }\bar\psi\Lambda_{\frac12}^{-1}\gamma^\mu\Lambda_{\frac12}\psi=\Lambda^\mu{}_\nu\,\bar\psi\gamma^\nu\psi,\\
@@ -1063,18 +1230,21 @@ which agrees with (0.14). Under $`\psi\to\Lambda_{\frac12}\psi`$, $`\bar\psi\to\
 \bar\psi\gamma^5\gamma^\mu\psi&\xrightarrow{\ \Lambda\ }\det[\Lambda]\,\Lambda^\mu{}_\nu\,\bar\psi\gamma^5\gamma^\nu\psi\qquad\text{(pseudovector)},\\
 \bar\psi\gamma^5\psi&\xrightarrow{\ \Lambda\ }\det[\Lambda]\,\bar\psi\gamma^5\psi\qquad\text{(pseudoscalar)}.
 \end{aligned}
+}
 \tag{1.46}
 ```
 
 **Proof** (for $`\gamma^5`$)
 
 ```math
+{
 \begin{aligned}
 \Lambda_{\frac12}^{-1}\gamma^5\Lambda_{\frac12}
 &=\frac{i}{4!}\epsilon_{\mu\nu\rho\sigma}\Lambda^\mu{}_\alpha\Lambda^\nu{}_\beta\Lambda^\rho{}_\kappa\Lambda^\sigma{}_\lambda\,\gamma^\alpha\gamma^\beta\gamma^\kappa\gamma^\lambda\\
 &=\frac{i}{4!}\det[\Lambda]\,\epsilon_{\alpha\beta\kappa\lambda}\gamma^\alpha\gamma^\beta\gamma^\kappa\gamma^\lambda
 =\det[\Lambda]\,\gamma^5.
 \end{aligned}
+}
 \tag{1.47}
 ```
 
@@ -1083,15 +1253,18 @@ which agrees with (0.14). Under $`\psi\to\Lambda_{\frac12}\psi`$, $`\bar\psi\to\
 **Chirality**
 
 ```math
+{
 \gamma^5\begin{pmatrix}\psi_L\\0\end{pmatrix}=-\begin{pmatrix}\psi_L\\0\end{pmatrix},
 \qquad
 \gamma^5\begin{pmatrix}0\\\psi_R\end{pmatrix}=\begin{pmatrix}0\\\psi_R\end{pmatrix}.
+}
 \tag{1.48}
 ```
 
 The left- and right-handed projection operators are
 
 ```math
+{
 P_L:=\frac{I_4-\gamma^5}2,\qquad P_R:=\frac{I_4+\gamma^5}2
 \quad\Longrightarrow\quad
 \begin{cases}
@@ -1099,6 +1272,7 @@ P_L+P_R=I_4,\\
 P_LP_R=P_RP_L=0,\\
 P_L^n=P_L,\quad P_R^n=P_R.
 \end{cases}
+}
 \tag{1.49}
 ```
 
@@ -1107,18 +1281,22 @@ P_L^n=P_L,\quad P_R^n=P_R.
 **Vector and Axial Currents**
 
 ```math
+{
 j^\mu:=\bar\psi\gamma^\mu\psi,\qquad
 j^{\mu5}:=\bar\psi\gamma^\mu\gamma^5\psi.
+}
 \tag{1.50}
 ```
 
 The Euler–Lagrange equation of (1.16) for $`\psi`$ is $`-i\partial_\mu\bar\psi\gamma^\mu-m\bar\psi=0`$. Together with (1.17),
 
 ```math
+{
 \partial_\mu j^\mu=(\partial_\mu\bar\psi)\gamma^\mu\psi+\bar\psi\gamma^\mu\partial_\mu\psi
 =im\bar\psi\psi-im\bar\psi\psi=0
 \quad\Longrightarrow\quad
 \int d^3x\,\bar\psi\gamma^0\psi=\text{const}.
+}
 \tag{1.51}
 ```
 
@@ -1127,8 +1305,10 @@ The Euler–Lagrange equation of (1.16) for $`\psi`$ is $`-i\partial_\mu\bar\psi
 **Helicity**
 
 ```math
+{
 h:=\frac{\mathbf p}{|\mathbf p|}\cdot\mathbf S,\qquad
 \mathbf S:=\frac12\begin{pmatrix}\boldsymbol\sigma&0\\0&\boldsymbol\sigma\end{pmatrix}.
+}
 \tag{1.52}
 ```
 
@@ -1154,18 +1334,22 @@ The first viewpoint in [Section 1.2](#classical-dynamics) naturally leads to Ope
 Consider unconstrained  fields $`\phi_a(x)`$ with a Lagrangian density
 
 ```math
+{
 \mathcal L=\mathcal L(\phi_a,\partial_\mu\phi_a),
 \qquad
 L(t)=\int d^3x\,\mathcal L.
+}
 \tag{2.1}
 ```
 
 At each fixed time, the field values form an infinite set of generalized coordinates:
 
 ```math
+{
 i\longleftrightarrow(a,\mathbf x),
 \qquad
 q_i(t)\longleftrightarrow\phi_a(t,\mathbf x).
+}
 \tag{2.2}
 ```
 
@@ -1174,11 +1358,13 @@ q_i(t)\longleftrightarrow\phi_a(t,\mathbf x).
 The momentum density conjugate to $`\phi_a(t,\mathbf x)`$ is
 
 ```math
+{
 \pi_a(t,\mathbf x)
 \equiv
 \frac{\delta L(t)}{\delta\dot\phi_a(t,\mathbf x)}
 =
 \frac{\partial\mathcal L}{\partial\dot\phi_a(t,\mathbf x)}.
+}
 \tag{2.3}
 ```
 
@@ -1187,27 +1373,32 @@ The momentum density conjugate to $`\phi_a(t,\mathbf x)`$ is
 The classical fields obey the equal-time canonical Poisson brackets
 
 ```math
+{
 \begin{aligned}
 \{\phi_a(t,\mathbf x),\pi_b(t,\mathbf y)\}_{\mathrm{PB}}
 &=\delta_{ab}\delta^{(3)}(\mathbf x-\mathbf y),\\
 \{\phi_a(t,\mathbf x),\phi_b(t,\mathbf y)\}_{\mathrm{PB}}
 &=\{\pi_a(t,\mathbf x),\pi_b(t,\mathbf y)\}_{\mathrm{PB}}=0.
 \end{aligned}
+}
 \tag{2.4}
 ```
 
 Canonical quantization promotes the fields and their conjugate momenta to operators and replaces these fundamental Poisson brackets according to
 
 ```math
+{
 \{\ ,\ \}_{\mathrm{PB}}
 \longrightarrow
 \frac{1}{i}[\ ,\ ].
+}
 \tag{2.5}
 ```
 
 Thus,
 
 ```math
+{
 \boxed{
 \begin{aligned}
 [\hat\phi_a(t,\mathbf x),\hat\pi_b(t,\mathbf y)]
@@ -1215,6 +1406,7 @@ Thus,
 [\hat\phi_a(t,\mathbf x),\hat\phi_b(t,\mathbf y)]
 &=[\hat\pi_a(t,\mathbf x),\hat\pi_b(t,\mathbf y)]=0.
 \end{aligned}}
+}
 \tag{2.6}
 ```
 
@@ -1232,10 +1424,12 @@ Here $`\delta_{ab}\delta^{(3)}(\mathbf x-\mathbf y)`$ generalizes the Kronecker 
 **Lie Group**
 
 ```math
+{
 \begin{aligned}
 U(n)&=\{A\in M_n(\mathbb C)\mid A^\dagger A=I\},\\[6pt]
 SU(n)&=\{A\in M_n(\mathbb C)\mid \det A=1,\ A^\dagger A=I\}.
 \end{aligned}
+}
 \tag{4.1}
 ```
 
@@ -1246,6 +1440,7 @@ SU(n)&=\{A\in M_n(\mathbb C)\mid \det A=1,\ A^\dagger A=I\}.
 Consider the one-parameter subgroup
 
 ```math
+{
 \begin{aligned}
 g(\theta)&=e^{i\theta T},\qquad \theta\in\mathbb R,\quad T\in M_n(\mathbb C),\\[6pt]
 \left.\frac{d}{d\theta}g(\theta)\right|_{\theta=0}&=iT,\\[6pt]
@@ -1253,6 +1448,7 @@ g^\dagger(\theta)g(\theta)=I\quad\text{for all }\theta\in\mathbb R
 &\Longrightarrow i(T-T^\dagger)=0
 \Longrightarrow T^\dagger=T.
 \end{aligned}
+}
 \tag{4.6}
 ```
 
@@ -1270,10 +1466,12 @@ g^\dagger(\theta)g(\theta)=I\quad\text{for all }\theta\in\mathbb R
 The one-parameter subgroup and its generator are
 
 ```math
+{
 \begin{aligned}
 g(\theta)&=e^{i\theta T},\qquad \theta\in\mathbb R,\quad T\in M_n(\mathbb C),\\[6pt]
 \left.\frac{d}{d\theta}g(\theta)\right|_{\theta=0}&=iT.
 \end{aligned}
+}
 \tag{4.7}
 ```
 
@@ -1296,8 +1494,10 @@ We use the theorem $`\det(e^{i\theta T})=e^{i\theta\operatorname{tr}T}`$, valid 
 Thus $`T`$ is traceless and Hermitian, and the Lie algebra is
 
 ```math
+{
 \mathfrak{su}(n)=\{iT\in M_n(\mathbb C)\mid
 \operatorname{tr}T=0,\ T^\dagger=T\}.
+}
 \tag{4.8}
 ```
 
@@ -1316,12 +1516,14 @@ The structure constants $`f^{abc}`$ are defined by $`[T^a,T^b]=if^{abc}T^c`$.
 Since the matrices $`T^a`$ are Hermitian,
 
 ```math
+{
 \begin{aligned}
 ([T^a,T^b])^\dagger&=-[T^a,T^b],\qquad
 \operatorname{tr}[T^a,T^b]=0,\\[6pt]
 [T^a,T^b]&\in\mathfrak{su}(n),\\[6pt]
 [T^a,T^b]&=f^{abc}(iT^c),\qquad f^{abc}\in\mathbb R.
 \end{aligned}
+}
 \tag{4.17}
 ```
 
@@ -1335,11 +1537,13 @@ The expansion coefficients are real because $`\{iT^c\}`$ is a basis over $`\math
 For $`iT_1,iT_2\in\mathfrak{su}(n)`$, define
 
 ```math
+{
 \begin{aligned}
 (\cdot,\cdot)&:\mathfrak{su}(n)\times\mathfrak{su}(n)\longrightarrow\mathbb R,\\[6pt]
 (iT_1,iT_2)&:=-2\operatorname{tr}\bigl[(iT_1)(iT_2)\bigr]\\
 &=2\operatorname{tr}(T_1T_2).
 \end{aligned}
+}
 \tag{4.18}
 ```
 
@@ -1377,13 +1581,16 @@ with equality if and only if $`T=0`$.
 Having established that this form defines an inner product on $`\mathfrak{su}(n)`$, we may choose an orthonormal basis $`\{iT^a\}`$ satisfying $`(iT^a,iT^b)=\delta^{ab}`$. Equivalently,
 
 ```math
+{
 \boxed{\operatorname{tr}(T^aT^b)=\frac12\delta^{ab}.}
+}
 \tag{4.19}
 ```
 
 **Total antisymmetry.** With this normalization and cyclicity of the trace, we obtain
 
 ```math
+{
 \begin{aligned}
 \operatorname{tr}([T^a,T^b]T^c)&=\frac{i}{2}f^{abc},\\
 f^{abc}&=-2i\operatorname{tr}([T^a,T^b]T^c),\\
@@ -1393,12 +1600,15 @@ f^{acb}
 &=-2i\operatorname{tr}(T^bT^aT^c-T^aT^bT^c)
 =-f^{abc}.
 \end{aligned}
+}
 \tag{4.20}
 ```
 
 ```math
+{
 \boxed{
 f^{abc}=f^{[abc]}\in\mathbb R
+}
 }
 \tag{4.21}
 ```
@@ -1419,32 +1629,38 @@ Building on this idea, we now develop the framework of gauge theory.
 The field operator is defined as
 
 ```math
+{
 \Psi(x):=\begin{pmatrix}
 \psi_1(x)\\
 \vdots\\
 \psi_n(x)
 \end{pmatrix}.
+}
 \tag{4.22}
 ```
 
 Define the Dirac adjoint by
 
 ```math
+{
 \begin{aligned}
 \bar\Psi(x)&:=\bigl(\bar\psi_1(x),\ldots,\bar\psi_n(x)\bigr),\\[6pt]
 \bar\psi_a(x)&:=\psi_a^\dagger(x)\gamma^0.
 \end{aligned}
+}
 \tag{4.23}
 ```
 
 The matter Lagrangian density is
 
 ```math
+{
 \begin{aligned}
 \mathcal L_{\mathrm{matter}}
 &=\bar\Psi\,i\gamma^\mu I_n\partial_\mu\Psi\\[6pt]
 &=\sum_{a=1}^{n}\bar\psi_a\,i\gamma^\mu\partial_\mu\psi_a.
 \end{aligned}
+}
 \tag{4.24}
 ```
 
@@ -1458,6 +1674,7 @@ The matter Lagrangian density is
 The gauge group of QCD is $`SU(3)`$. By (4.8) with $`n=3`$, $`\mathfrak{su}(3)`$ has a basis $`\{iT^a\}`$, $`a=1,\ldots,8`$, which we take orthonormal in the sense of (4.19). The standard choice is $`T^a:=\tfrac12\lambda^a`$, where the Gell-Mann matrices are
 
 ```math
+{
 \begin{aligned}
 \lambda^1&=\begin{pmatrix}0&1&0\\1&0&0\\0&0&0\end{pmatrix},&
 \lambda^2&=\begin{pmatrix}0&-i&0\\i&0&0\\0&0&0\end{pmatrix},&
@@ -1468,18 +1685,21 @@ The gauge group of QCD is $`SU(3)`$. By (4.8) with $`n=3`$, $`\mathfrak{su}(3)`$
 \lambda^7&=\begin{pmatrix}0&0&0\\0&0&-i\\0&i&0\end{pmatrix},&
 \lambda^8&=\frac1{\sqrt3}\begin{pmatrix}1&0&0\\0&1&0\\0&0&-2\end{pmatrix}.
 \end{aligned}
+}
 \tag{4.25}
 ```
 
 Each $`\lambda^a`$ is Hermitian and traceless, and $`\operatorname{tr}(\lambda^a\lambda^b)=2\delta^{ab}`$, so $`\operatorname{tr}(T^aT^b)=\tfrac12\delta^{ab}`$ as in (4.19). By (4.20), $`f^{abc}=-2i\operatorname{tr}([T^a,T^b]T^c)`$; up to the antisymmetry (4.21), the nonzero structure constants are
 
 ```math
+{
 \begin{aligned}
 f^{123}&=1,\\[4pt]
 f^{147}=f^{246}=f^{257}=f^{345}&=\tfrac12,\qquad
 f^{156}=f^{367}=-\tfrac12,\\[4pt]
 f^{458}=f^{678}&=\tfrac{\sqrt3}{2}.
 \end{aligned}
+}
 \tag{4.26}
 ```
 
@@ -1492,9 +1712,11 @@ The quadratic Casimir $`T^aT^a`$ commutes with every $`T^b`$, since $`f^{bac}`$ 
 The defining representation of $`SU(3)`$ is irreducible, so by Schur's lemma $`T^aT^a=C_FI_3`$. Taking the trace with (4.19),
 
 ```math
+{
 3C_F=\operatorname{tr}(T^aT^a)=\tfrac12\cdot8
 \quad\Longrightarrow\quad
 \boxed{T^aT^a=C_FI_3,\qquad C_F=\tfrac43.}
+}
 \tag{4.27}
 ```
 
@@ -1505,9 +1727,11 @@ The defining representation of $`SU(3)`$ is irreducible, so by Schur's lemma $`T
 For each flavor $`f\in\{u,d,s,c,b,t\}`$ the quark field is a color triplet, i.e. the multiplet (4.22) with $`n=3`$, with Dirac adjoint as in (4.23):
 
 ```math
+{
 q_f(x):=\begin{pmatrix}\psi_{f,1}(x)\\\psi_{f,2}(x)\\\psi_{f,3}(x)\end{pmatrix},
 \qquad
 \bar q_f(x):=\bigl(\bar\psi_{f,1}(x),\bar\psi_{f,2}(x),\bar\psi_{f,3}(x)\bigr).
+}
 \tag{4.28}
 ```
 
@@ -1520,24 +1744,30 @@ Throughout this section $`\gamma^\mu`$ acts on the spinor index of each $`\psi_{
 Let $`\theta^a:\mathbb R^4\to\mathbb R`$, $`a=1,\ldots,8`$, and set
 
 ```math
+{
 g(x):=e^{i\theta^a(x)T^a}\in SU(3).
+}
 \tag{4.29}
 ```
 
 This is the internal transformation (1.14) with $`g`$ now depending on $`x`$. The quark fields transform as
 
 ```math
+{
 q_f'(x)=g(x)\,q_f(x),\qquad
 \bar q_f'(x)=\bar q_f(x)\,g^\dagger(x).
+}
 \tag{4.30}
 ```
 
 Since $`\partial_\mu(gq_f)=g\,\partial_\mu q_f+(\partial_\mu g)\,q_f`$, the derivative term of (4.24) is not invariant under (4.30):
 
 ```math
+{
 \bar q_f'\,i\gamma^\mu\partial_\mu q_f'
 =\bar q_f\,i\gamma^\mu\partial_\mu q_f
 +\bar q_f\,i\gamma^\mu g^\dagger(\partial_\mu g)\,q_f.
+}
 \tag{4.31}
 ```
 
@@ -1548,27 +1778,33 @@ Since $`\partial_\mu(gq_f)=g\,\partial_\mu q_f+(\partial_\mu g)\,q_f`$, the deri
 Introduce eight real vector fields $`A^a_\mu`$, the gluon fields, and define
 
 ```math
+{
 A_\mu:=A^a_\mu T^a,\qquad
 D_\mu:=\partial_\mu-ig_sA_\mu,
+}
 \tag{4.32}
 ```
 
 where $`g_s\in\mathbb R`$ is the strong coupling constant and $`D_\mu`$ acts on color triplets. Let $`A_\mu'`$ denote the transformed gluon field and $`D_\mu':=\partial_\mu-ig_sA_\mu'`$. We require $`D_\mu'q_f'=g\,D_\mu q_f`$:
 
 ```math
+{
 \begin{aligned}
 D_\mu'(gq_f)&=g\,\partial_\mu q_f+(\partial_\mu g)\,q_f-ig_sA_\mu'\,g\,q_f,\\[6pt]
 g\,D_\mu q_f&=g\,\partial_\mu q_f-ig_s\,gA_\mu\,q_f.
 \end{aligned}
+}
 \tag{4.33}
 ```
 
 Equating the two for all $`q_f`$ gives $`A_\mu'g=gA_\mu-\frac{i}{g_s}\partial_\mu g`$, i.e.
 
 ```math
+{
 \boxed{
 A_\mu'=gA_\mu g^\dagger-\frac{i}{g_s}(\partial_\mu g)\,g^\dagger
 =gA_\mu g^\dagger+\frac{i}{g_s}\,g\,\partial_\mu g^\dagger.
+}
 }
 \tag{4.34}
 ```
@@ -1578,19 +1814,23 @@ Differentiating $`gg^\dagger=I_3`$ gives $`\bigl((\partial_\mu g)g^\dagger\bigr)
 Since $`D_\mu'(gq_f)=g\,D_\mu q_f`$ holds for all $`q_f`$, as operators on color triplets
 
 ```math
+{
 D_\mu'=g\,D_\mu\,g^\dagger.
+}
 \tag{4.35}
 ```
 
 For infinitesimal $`\theta^a`$, $`g=I_3+i\theta^aT^a+O(\theta^2)`$ and (4.34) gives
 
 ```math
+{
 \begin{aligned}
 A_\mu'&=A_\mu+i\theta^b[T^b,A_\mu]+\frac1{g_s}(\partial_\mu\theta^a)T^a+O(\theta^2)\\
 &=A_\mu-f^{bca}\theta^bA^c_\mu T^a+\frac1{g_s}(\partial_\mu\theta^a)T^a+O(\theta^2),\\[6pt]
 \delta A^a_\mu:=A_\mu'^a-A_\mu^a
 &=\frac1{g_s}\partial_\mu\theta^a+f^{abc}A^b_\mu\theta^c+O(\theta^2).
 \end{aligned}
+}
 \tag{4.36}
 ```
 
@@ -1601,20 +1841,24 @@ A_\mu'&=A_\mu+i\theta^b[T^b,A_\mu]+\frac1{g_s}(\partial_\mu\theta^a)T^a+O(\theta
 Define $`F_{\mu\nu}`$ by $`[D_\mu,D_\nu]=:-ig_sF_{\mu\nu}`$. Since $`[\partial_\mu,A_\nu]q_f=(\partial_\mu A_\nu)q_f`$,
 
 ```math
+{
 \begin{aligned}
 [D_\mu,D_\nu]
 &=[\partial_\mu-ig_sA_\mu,\ \partial_\nu-ig_sA_\nu]\\
 &=-ig_s\bigl(\partial_\mu A_\nu-\partial_\nu A_\mu\bigr)-g_s^2[A_\mu,A_\nu],\\[6pt]
 F_{\mu\nu}&=\partial_\mu A_\nu-\partial_\nu A_\mu-ig_s[A_\mu,A_\nu].
 \end{aligned}
+}
 \tag{4.37}
 ```
 
 Expanding in the basis, $`F_{\mu\nu}=F^a_{\mu\nu}T^a`$ with
 
 ```math
+{
 \boxed{
 F^a_{\mu\nu}=\partial_\mu A^a_\nu-\partial_\nu A^a_\mu+g_sf^{abc}A^b_\mu A^c_\nu.
+}
 }
 \tag{4.38}
 ```
@@ -1622,18 +1866,22 @@ F^a_{\mu\nu}=\partial_\mu A^a_\nu-\partial_\nu A^a_\mu+g_sf^{abc}A^b_\mu A^c_\nu
 By (4.35), $`[D_\mu',D_\nu']=g[D_\mu,D_\nu]g^\dagger`$, so
 
 ```math
+{
 F_{\mu\nu}'=gF_{\mu\nu}g^\dagger,
 \qquad
 \delta F^a_{\mu\nu}=f^{abc}F^b_{\mu\nu}\theta^c+O(\theta^2).
+}
 \tag{4.39}
 ```
 
 By cyclicity of the trace and (4.19),
 
 ```math
+{
 \operatorname{tr}\bigl(F_{\mu\nu}'F'^{\mu\nu}\bigr)
 =\operatorname{tr}\bigl(F_{\mu\nu}F^{\mu\nu}\bigr)
 =\tfrac12F^a_{\mu\nu}F^{a\mu\nu}.
+}
 \tag{4.40}
 ```
 
@@ -1642,6 +1890,7 @@ By cyclicity of the trace and (4.19),
 **The QCD Lagrangian**
 
 ```math
+{
 \boxed{
 \mathcal L_{\mathrm{QCD}}
 =\sum_{f}\bar q_f\bigl(i\gamma^\mu D_\mu-m_f\bigr)q_f
@@ -1649,15 +1898,18 @@ By cyclicity of the trace and (4.19),
 =\sum_{f}\bar q_f\bigl(i\gamma^\mu D_\mu-m_f\bigr)q_f
 -\frac14F^a_{\mu\nu}F^{a\mu\nu},
 }
+}
 \tag{4.41}
 ```
 
 where the sum runs over the six flavors in (4.28), $`m_f`$ is the mass of flavor $`f`$, and $`D_\mu`$ acts on the $`q_f`$ to its right. Under (4.30) and (4.34), $`D_\mu'q_f'=g\,D_\mu q_f`$ by construction, so
 
 ```math
+{
 \bar q_f'\bigl(i\gamma^\mu D_\mu'-m_f\bigr)q_f'
 =\bar q_f\,g^\dagger\bigl(i\gamma^\mu g\,D_\mu-m_f\,g\bigr)q_f
 =\bar q_f\bigl(i\gamma^\mu D_\mu-m_f\bigr)q_f.
+}
 \tag{4.42}
 ```
 
@@ -1666,6 +1918,7 @@ Together with (4.40), $`\mathcal L_{\mathrm{QCD}}`$ is invariant under the local
 Substituting (4.32) and (4.38) into (4.41) separates the free and interaction terms:
 
 ```math
+{
 \begin{aligned}
 \mathcal L_{\mathrm{QCD}}
 ={}&\sum_f\bar q_f\bigl(i\gamma^\mu\partial_\mu-m_f\bigr)q_f
@@ -1674,6 +1927,7 @@ Substituting (4.32) and (4.38) into (4.41) separates the free and interaction te
 -\frac{g_s}{2}f^{abc}\bigl(\partial_\mu A^a_\nu-\partial_\nu A^a_\mu\bigr)A^{b\mu}A^{c\nu}
 -\frac{g_s^2}{4}f^{abc}f^{ade}A^b_\mu A^c_\nu A^{d\mu}A^{e\nu}.
 \end{aligned}
+}
 \tag{4.43}
 ```
 
@@ -1684,13 +1938,16 @@ Substituting (4.32) and (4.38) into (4.41) separates the free and interaction te
 Treating $`q_f`$, $`\bar q_f`$ and $`A^a_\mu`$ as independent, the Euler–Lagrange equation for $`\bar q_f`$ is
 
 ```math
+{
 \bigl(i\gamma^\mu D_\mu-m_f\bigr)q_f=0.
+}
 \tag{4.44}
 ```
 
 For $`A^a_\nu`$, define the color current $`j^{a\nu}:=\sum_f\bar q_f\gamma^\nu T^aq_f`$. From (4.41) with (4.38) and (4.43),
 
 ```math
+{
 \begin{aligned}
 \frac{\partial\mathcal L_{\mathrm{QCD}}}{\partial(\partial_\mu A^a_\nu)}
 &=-\frac12F^{b\rho\sigma}\,\delta^{ab}\bigl(\delta^\mu_\rho\delta^\nu_\sigma-\delta^\mu_\sigma\delta^\nu_\rho\bigr)
@@ -1700,14 +1957,17 @@ For $`A^a_\nu`$, define the color current $`j^{a\nu}:=\sum_f\bar q_f\gamma^\nu T
 &=g_sj^{a\nu}-g_sf^{abc}A^c_\mu F^{b\mu\nu}\\
 &=g_sj^{a\nu}+g_sf^{abc}A^b_\mu F^{c\mu\nu}.
 \end{aligned}
+}
 \tag{4.45}
 ```
 
 The Euler–Lagrange equation $`\partial_\mu\bigl(\partial\mathcal L_{\mathrm{QCD}}/\partial(\partial_\mu A^a_\nu)\bigr)=\partial\mathcal L_{\mathrm{QCD}}/\partial A^a_\nu`$ then reads
 
 ```math
+{
 \boxed{
 \partial_\mu F^{a\mu\nu}+g_sf^{abc}A^b_\mu F^{c\mu\nu}=-g_sj^{a\nu}.
+}
 }
 \tag{4.46}
 ```
@@ -1715,7 +1975,9 @@ The Euler–Lagrange equation $`\partial_\mu\bigl(\partial\mathcal L_{\mathrm{QC
 The left-hand side is the $`a`$-component of $`\partial_\mu F^{\mu\nu}-ig_s[A_\mu,F^{\mu\nu}]`$, the covariant derivative of $`F^{\mu\nu}`$ in the adjoint representation; with $`j^\nu:=j^{a\nu}T^a`$, (4.46) is
 
 ```math
+{
 D_\mu F^{\mu\nu}:=\partial_\mu F^{\mu\nu}-ig_s[A_\mu,F^{\mu\nu}]=-g_s\,j^\nu.
+}
 \tag{4.47}
 ```
 
@@ -1733,17 +1995,21 @@ D_\mu F^{\mu\nu}:=\partial_\mu F^{\mu\nu}-ig_s[A_\mu,F^{\mu\nu}]=-g_s\,j^\nu.
 Let the Hamiltonian be
 
 ```math
+{
 \hat H=\hat H_0+\hat V,
+}
 \tag{6.1}
 ```
 
 with $`\hat H_0`$ and $`\hat V`$ time independent in the Schrödinger picture. In the Schrödinger picture, states evolve as $`|\psi_S(t)\rangle=e^{-i\hat Ht}|\psi_S(0)\rangle`$ and operators $`\hat O_S`$ are fixed; in the Heisenberg picture, $`\hat O_H(t)=e^{i\hat Ht}\hat O_Se^{-i\hat Ht}`$ and $`|\psi_H\rangle=|\psi_S(0)\rangle`$. The interaction picture evolves operators with $`\hat H_0`$ instead of $`\hat H`$:
 
 ```math
+{
 \boxed{
 \hat O_I(t):=e^{i\hat H_0t}\,\hat O_S\,e^{-i\hat H_0t},
 \qquad
 |\psi_I(t)\rangle:=e^{i\hat H_0t}\,|\psi_S(t)\rangle .
+}
 }
 \tag{6.2}
 ```
@@ -1753,7 +2019,9 @@ The three pictures coincide at $`t=0`$, and $`\langle\psi_I(t)|\hat O_I(t)|\psi_
 Differentiating the first of (6.2),
 
 ```math
+{
 \frac{d\hat O_I}{dt}=i\,[\hat H_0,\hat O_I].
+}
 \tag{6.3}
 ```
 
@@ -1768,10 +2036,12 @@ i\partial_t|\psi_I(t)\rangle
 i.e.
 
 ```math
+{
 \boxed{
 i\partial_t|\psi_I(t)\rangle=\hat V_I(t)\,|\psi_I(t)\rangle,
 \qquad
 \hat V_I(t):=e^{i\hat H_0t}\,\hat V\,e^{-i\hat H_0t}.
+}
 }
 \tag{6.4}
 ```
@@ -1779,9 +2049,11 @@ i\partial_t|\psi_I(t)\rangle=\hat V_I(t)\,|\psi_I(t)\rangle,
 Substituting $`\hat O_S=e^{-i\hat H_0t}\hat O_I(t)e^{i\hat H_0t}`$ into the definition of $`\hat O_H`$,
 
 ```math
+{
 \hat O_H(t)=\hat U_I(t,0)^\dagger\,\hat O_I(t)\,\hat U_I(t,0),
 \qquad
 \hat U_I(t,0):=e^{i\hat H_0t}e^{-i\hat Ht}.
+}
 \tag{6.5}
 ```
 
@@ -1794,28 +2066,34 @@ For a field operator, (6.5) reads $`\hat\phi_H(t,\mathbf x)=\hat U_I(t,0)^\dagge
 Define the interaction-picture evolution operator $`\hat U_I(t,t_0)`$ by $`|\psi_I(t)\rangle=\hat U_I(t,t_0)|\psi_I(t_0)\rangle`$. By (6.4),
 
 ```math
+{
 i\partial_t\hat U_I(t,t_0)=\hat V_I(t)\,\hat U_I(t,t_0),
 \qquad
 \hat U_I(t_0,t_0)=1 .
+}
 \tag{6.6}
 ```
 
 By (6.2) and $`|\psi_S(t)\rangle=e^{-i\hat H(t-t_0)}|\psi_S(t_0)\rangle`$,
 
 ```math
+{
 \hat U_I(t,t_0)=e^{i\hat H_0t}\,e^{-i\hat H(t-t_0)}\,e^{-i\hat H_0t_0},
+}
 \tag{6.7}
 ```
 
 which is unitary, satisfies $`\hat U_I(t_1,t_2)\hat U_I(t_2,t_3)=\hat U_I(t_1,t_3)`$ and $`\hat U_I(t,t_0)^\dagger=\hat U_I(t_0,t)`$, and reduces to the $`\hat U_I(t,0)`$ of (6.5) at $`t_0=0`$. Since $`[\hat V_I(t_1),\hat V_I(t_2)]\neq0`$ in general, (6.6) is not solved by $`e^{-i\int\hat V_I}`$. Instead, integrate (6.6) and iterate:
 
 ```math
+{
 \begin{aligned}
 \hat U_I(t,t_0)
 &=1-i\int_{t_0}^{t}dt_1\,\hat V_I(t_1)\,\hat U_I(t_1,t_0)\
 &=1+(-i)\int_{t_0}^{t}dt_1\,\hat V_I(t_1)
 +(-i)^2\int_{t_0}^{t}dt_1\int_{t_0}^{t_1}dt_2\,\hat V_I(t_1)\hat V_I(t_2)+\cdots ,
 \end{aligned}
+}
 \tag{6.8}
 ```
 
@@ -1824,29 +2102,35 @@ where the $`n`$-th term is integrated over $`t\ge t_1\ge\cdots\ge t_n\ge t_0`$, 
 Define the time-ordered product
 
 ```math
+{
 \mathcal T[\hat V_I(t_1)\hat V_I(t_2)]
 :=\theta(t_1-t_2)\,\hat V_I(t_1)\hat V_I(t_2)+\theta(t_2-t_1)\,\hat V_I(t_2)\hat V_I(t_1),
+}
 \tag{6.9}
 ```
 
 and likewise for $`n`$ operators, ordered with time decreasing from left to right. $`\mathcal T[\hat V_I(t_1)\cdots\hat V_I(t_n)]`$ is symmetric under permutations of $`t_1,\ldots,t_n`$; the cube $`[t_0,t]^n`$ splits into $`n!`$ regions according to the ordering of the $`t_i`$, each contributing equally, and on $`t_1>\cdots>t_n`$ the time-ordered product is the ordered product in (6.8). Hence
 
 ```math
+{
 \int_{t_0}^{t}dt_1\int_{t_0}^{t_1}dt_2\cdots\int_{t_0}^{t_{n-1}}dt_n\,
 \hat V_I(t_1)\cdots\hat V_I(t_n)
 =\frac1{n!}\int_{t_0}^{t}dt_1\cdots\int_{t_0}^{t}dt_n\,
 \mathcal T[\hat V_I(t_1)\cdots\hat V_I(t_n)],
+}
 \tag{6.10}
 ```
 
 and (6.8) becomes the Dyson series
 
 ```math
+{
 \boxed{
 \hat U_I(t,t_0)
 =\sum_{n=0}^{\infty}\frac{(-i)^n}{n!}\int_{t_0}^{t}dt_1\cdots dt_n\,
 \mathcal T[\hat V_I(t_1)\cdots\hat V_I(t_n)]
 =:\mathcal T\exp\Bigl(-i\int_{t_0}^{t}dt'\,\hat V_I(t')\Bigr).
+}
 }
 \tag{6.11}
 ```
@@ -1856,7 +2140,9 @@ Alternatively, differentiate the $`n`$-th term of (6.11) with respect to $`t`$: 
 In field theory, $`\hat V=\int d^3x\,\hat{\mathcal H}_{\mathrm{int}}\bigl(\hat\phi_S(\mathbf x)\bigr)`$. By (6.2), $`\hat V_I(t)=\int d^3x\,\hat{\mathcal H}_{\mathrm{int}}\bigl(\hat\phi_I(t,\mathbf x)\bigr)`$, and (6.11) becomes
 
 ```math
+{
 \hat U_I(t,t_0)=\mathcal T\exp\Bigl(-i\int_{t_0}^{t}dt'\int d^3x\,\hat{\mathcal H}_{\mathrm{int}}\bigl(\hat\phi_I(x)\bigr)\Bigr).
+}
 \tag{6.12}
 ```
 
